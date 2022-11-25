@@ -1,0 +1,31 @@
+﻿<Window x:Class="CronometroWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CronometroWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="120" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"
+        Background="Aquamarine"
+        AllowsTransparency="False">
+    
+    <Grid  ShowGridLines="False" Margin="0,0,0,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnStart" Grid.Column="2" Width="267" HorizontalAlignment="Center" Click="btnStart_Click" Height="30" VerticalAlignment="Bottom" Content="Start"/>
+        <Button x:Name="btnStop" Grid.Column="1" Width="267" HorizontalAlignment="Center" Click="btnStop_Click" Height="30" VerticalAlignment="Center" Content="Pausa"/>
+        <Button x:Name="btnReset" Width="267" HorizontalAlignment="Center" Click="btnReset_Click" Height="30" VerticalAlignment="Center" Content="Stop"/>
+        <Label x:Name="timerLabel" Content="0:00:00" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+    </Grid>
+</Window>
